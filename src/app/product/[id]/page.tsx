@@ -1,10 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-interface Params {
-  params: { id: string };
-}
-
-export default function Producto({ params }: Params) {
+export default function Producto({ params }: any) {
   const product = {
     id: params.id,
     name: "Cerámica artesanal",
