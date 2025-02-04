@@ -1,7 +1,10 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
-export default function Producto({ params }: { params: { id: string } }) {
-  // En una aplicación real, aquí cargarías los datos del producto basado en el ID
+interface Params {
+  params: { id: string };
+}
+
+export default function Producto({ params }: Params) {
   const product = {
     id: params.id,
     name: "Cerámica artesanal",
@@ -9,7 +12,7 @@ export default function Producto({ params }: { params: { id: string } }) {
     description:
       "Hermosa pieza de cerámica hecha a mano por artesanos locales. Cada pieza es única y tiene su propia historia.",
     artisan: "María González",
-  }
+  };
 
   return (
     <div className="space-y-8">
@@ -31,6 +34,5 @@ export default function Producto({ params }: { params: { id: string } }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
